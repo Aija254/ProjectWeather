@@ -14,3 +14,32 @@ let weather = {
         .then((data) => this.displayWeather(data));
       }
     }
+
+    // Function to display the weather data on the page
+    displayWeather: function( data ) {
+        // Destructure the data object to get relevant data
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+    
+        // Log the data to the console for debugging purposes
+        console.log(name, icon, description, temp, humidity, speed);
+
+
+      // Update the page elements with the weather data
+      document.querySelector(".city").innerText = "weather in " + name;
+      document.querySelector(".icon").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+      document.querySelector(".temp").innerText = temp + "°C";
+      document.querySelector(".description").innerText = description;
+      document.querySelector(".humidity").innerText = ` Humidity: ${humidity}%`;
+      document.querySelector(".wind").innerText = " Wind Speed: " + speed + "m/s";
+      document.body.style.backgroundImage = "url ('https://source.unsplash.com/1600x900/? + name +')"
+    },
+  
+    // Function to search for weather by city
+    search: function() {
+      // Call fetchWeather function with the search query entered by the user
+      this.fetchWeather(document.querySelector(".search-bar").value);
+    }
+  }; 
