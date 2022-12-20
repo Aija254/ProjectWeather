@@ -1,0 +1,12 @@
+/* Body element styles */
+body {
+    display: flex; /* align the items in the center of the page */
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* set the height to 80% of the viewport height */
+    margin: 0; /* remove default margins */
+    background: #222; /* set the background color */
+    font-family: 'Open Sans', sans-serif; /* set the font family */
+    background-image: url('https://source.unsplash.com/1600x900/?Landscape'); /* set the background image */
+    background-size: cover; /* cover the entire page with the background image */
+  }
