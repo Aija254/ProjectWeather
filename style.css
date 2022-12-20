@@ -30,3 +30,26 @@ body {
     /* This aligns the flex items along the horizontal axis, centering them within the container */
     justify-content: center;
   }
+
+   /* This class styles a button element */
+   .button {
+    /* This adds a margin around the button */
+    margin: 0.5em;
+    /* This removes the border around the button */
+    border: none;
+    /* This sets the height of the button */
+    height: 2.5em;
+    /* This sets the width of the button */
+    width: 2.5em;
+    /* This removes the default outline around the button */
+    outline: none;
+    /* This sets the background color of the button */
+    background: #7c7c7c2b;
+    /* This sets the text color of the button */
+    color: white;
+    /* This makes the cursor change to a pointer when hovering over the button */
+    cursor: pointer;
+    /* This adds a transition effect when hovering over the button */
+    transition: 0.2s ease-in-out;
+  }
+  
