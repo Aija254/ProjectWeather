@@ -12,21 +12,19 @@ let weather = {
         .then((response) => response.json())
         // Call displayWeather function to display the weather data
         .then((data) => this.displayWeather(data));
-      }
-    }
-
+    },
+  
     // Function to display the weather data on the page
     displayWeather: function( data ) {
-        // Destructure the data object to get relevant data
-        const { name } = data;
-        const { icon, description } = data.weather[0];
-        const { temp, humidity } = data.main;
-        const { speed } = data.wind;
-    
-        // Log the data to the console for debugging purposes
-        console.log(name, icon, description, temp, humidity, speed);
-
-
+      // Destructure the data object to get relevant data
+      const { name } = data;
+      const { icon, description } = data.weather[0];
+      const { temp, humidity } = data.main;
+      const { speed } = data.wind;
+  
+      // Log the data to the console for debugging purposes
+      console.log(name, icon, description, temp, humidity, speed);
+  
       // Update the page elements with the weather data
       document.querySelector(".city").innerText = "weather in " + name;
       document.querySelector(".icon").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
@@ -42,10 +40,20 @@ let weather = {
       // Call fetchWeather function with the search query entered by the user
       this.fetchWeather(document.querySelector(".search-bar").value);
     }
-  }; 
-
-   // Add event listener for click event on the search button
-   document.querySelector(".search button").addEventListener("click", function () {
+  };
+  
+  // Add event listener for click event on the search button
+  document.querySelector(".search button").addEventListener("click", function () {
     // Call search function on the weather object
     weather.search();
   });
+  
+  // Add event listener for keyup event on the search input field
+  document.querySelector(".search-bar").addEventListener("keyup", function(event) {
+    // If the key pressed is "Enter"
+    if (event.key === "Enter") {
+      // Call search function on the weather object
+      weather.search();
+    }
+  });
+  
