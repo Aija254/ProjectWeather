@@ -52,4 +52,23 @@ body {
     /* This adds a transition effect when hovering over the button */
     transition: 0.2s ease-in-out;
   }
-  
+
+  /* This class styles a search bar input element */
+  input.search.bar {
+    /* This removes the default border around the input */
+    border: none;
+    /* This removes the default outline around the input */
+    outline: none;
+    /* This adds rounded corners to the input */
+    border-radius: 18px;
+    /* This sets the background color of the input */
+    background-color: #7c7c7c2b;
+    /* This sets the text color of the input */
+    color: white;
+    /* This sets the font family of the input */
+    font-family: inherit;
+    /* This sets the font size of the input */
+    font-size: 120%;
+    /* This sets the width of the input */
+    width: 50%;
+  }
