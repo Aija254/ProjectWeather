@@ -72,3 +72,33 @@ body {
     /* This sets the width of the input */
     width: 50%;
   }
+
+  /* This styles any button element when hovering over it */
+  button:hover {
+    /* This sets the background color of the button when hovering over it */
+    background: #a9acab98;
+  }
+  
+  /* This styles a h1 element with the class "temp" */
+  h1.temp {
+    /* This removes the default margin around the h1 element */
+    margin: 0;
+    /* This adds a bottom margin to the h1 element */
+    margin-bottom: 0.4em;
+  }
+  
+  /* This class styles a container element to be a flex container */
+  .flex {
+    display: flex;
+    /* This aligns the flex items to the center of the container */
+    align-items: center;
+  }
+  
+  /* This styles a "description" element */
+  .description {
+    /* This converts the text in the element to lowercase */
+    text-transform: uppercase;
+    /* This aligns the element to the right of the container */
+    margin-left: auto;
+  }
+  
