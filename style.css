@@ -10,3 +10,23 @@ body {
     background-image: url('https://source.unsplash.com/1600x900/?Landscape'); /* set the background image */
     background-size: cover; /* cover the entire page with the background image */
   }
+
+   /* Card containing search form and weather information */
+   .card {
+    background: #000000d0; /* set the background color with transparency */
+    color: white; /* set the text color to white */
+    padding: 2em; /* add padding to the card */
+    border-radius: 30px; /* round the corners of the card */
+    width: 100%; /* make the card take up the full width of its parent */
+    max-width: 420px; /* set a maximum width for the card */
+    margin: 1em; /* add a margin to the card */
+  }
+
+  /* This class styles a container element to be a flex container */
+.search {
+    display: flex;
+    /* This aligns the flex items to the center of the container */
+    align-items: center;
+    /* This aligns the flex items along the horizontal axis, centering them within the container */
+    justify-content: center;
+  }
